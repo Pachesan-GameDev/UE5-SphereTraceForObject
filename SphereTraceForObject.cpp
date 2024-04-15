@@ -21,7 +21,7 @@ void ASphereTraceForObject::BeginPlay()
 		this,
 		GetActorLocation(),
 		(GetActorForwardVector() * 500) + GetActorLocation(),
-		20,
+		20.0f,
 		ObjectTypes,
 		false,
 		ActorsToIgnore,

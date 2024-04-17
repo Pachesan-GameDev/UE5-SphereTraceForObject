@@ -12,7 +12,7 @@ void ASphereTraceForObject::BeginPlay()
 	
 	FVector Start = GetActorLocation();
 	FVector End = (GetActorForwardVector() * 500) + Start;
-	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes = {UEngineTypes::ConvertToObjectType(ECC_WorldStatic)};
 	TArray<AActor*> ActorsToIgnore;
 	FHitResult HitResult;
 

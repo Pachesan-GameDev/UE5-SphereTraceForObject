@@ -16,7 +16,7 @@ void ASphereTraceForObject::BeginPlay()
 	TArray<AActor*> ActorsToIgnore;
 	FHitResult HitResult;
 
-	UKismetSystemLibrary::SphereTraceSingleForObjects
+	bool bHit = UKismetSystemLibrary::SphereTraceSingleForObjects
 	(
 		this,
 		GetActorLocation(),
@@ -30,7 +30,7 @@ void ASphereTraceForObject::BeginPlay()
 		true,
 		FLinearColor::Red,
 		FLinearColor::Green,
-		5.0f
+		60.0f
 	);
 }
 

@@ -18,9 +18,9 @@ void ASphereTraceForObject::BeginPlay()
 
 	bool bHit = UKismetSystemLibrary::SphereTraceSingleForObjects
 	(
-		this,
-		GetActorLocation(),
-		(GetActorForwardVector() * 500) + GetActorLocation(),
+		GetWorld(),
+		Start,
+		End,
 		20.0f,
 		ObjectTypes,
 		false,
